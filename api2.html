@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: black;">
+    
+</body>
+<script>
+     const requestUrl2 = 'https://avatars.githubusercontent.com/u/11613311?v=4'
+
+const xhr = new XMLHttpRequest()
+  
+  xhr.open('GET' , requestUrl2)
+
+  console.log(xhr.readyState);
+  xhr.onreadystatechange = function(){
+   console.log(xhr.readyState);
+   if(readyState === 4){
+       const data2 = JSON.parse(this.responseText)
+       console.log(data2.image);
+       console.log(data2.followers);
+   }
+  }
+ 
+
+  xhr.send();
+</script>
+</html>
