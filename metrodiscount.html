@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Metro ticketing</title>
+</head>
+<body>
+  <script>
+    let age = 7;
+    let gender = 'male';
+    let finalDiscount;
+
+    if(age <= 5){
+      finalDiscount = 0;
+    }else if( gender === 'female' || age <= 8 ){
+      finalDiscount = 50;
+    }else if (age >= 65){
+      finalDiscount = 30;
+    }else{
+      finalDiscount = 0;
+    }
+
+    console.log(`Your final discount is ${finalDiscount}`)
+
+
+    function checkOdd(a){
+      if(a%2 === 0){
+        return 'no. is even';
+      }else{
+        return 'no. is odd';
+      }
+    }
+
+    checkOdd(10);
+
+    function largerOfTwo(a,b){
+      if(a > b){
+        return `${a} is grater than ${b}`;
+      }else{
+        return `${a} is smaller than ${b}`;
+      }
+    }
+
+    largerOfTwo(10,5);
+
+    function celsiusToFahrenheit(c){
+       fahrenheit = (9/5) * c + 32 ;
+       return fahrenheit;
+    }
+
+    celsiusToFahrenheit(30);
+  </script>
+</body>
+</html>
